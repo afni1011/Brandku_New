@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrandKu</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-white text-gray-800 min-h-screen flex flex-col">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-sm">
+    <nav class="w-full px-4 py-3 flex justify-between items-center">
+      <h1 class="text-lg font-bold text-blue-600">BrandKu</h1>
+
+      <ul class="hidden md:flex gap-7 text-sm text-gray-600 font-medium items-center">
+        <li><a href="#beranda" class="hover:text-blue-600">Beranda</a></li>
+        <li><a href="#fitur" class="hover:text-blue-600">Fitur</a></li>
+        <li><a href="#footer" class="hover:text-blue-600">Harga</a></li>
+      </ul>
+
+      <button id="menuBtn" class="md:hidden text-2xl">
+        ☰
+      </button>
+    </nav>
+
+    <!-- Menu Mobile -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white px-8 pb-3 text-sm">
+      <a href="#beranda" class="block py-2 text-gray-600">Beranda</a>
+      <a href="#fitur" class="block py-2 text-gray-600">Fitur</a>
+      <a href="#footer" class="block py-2 text-gray-600">Harga</a>
+    </div>
+  </header>
+
+  <!-- Isi Utama -->
+  <main class="flex-1">
+
+    <!-- Hero Section -->
+    <section id="beranda" class="bg-blue-50 h-[280px] flex items-center justify-center text-center">
+      <div class="px-5">
+        <h2 class="text-[32px] font-extrabold text-gray-900 mb-3">
+          Solusi Terbaik untuk Bisnismu
+        </h2>
+
+        <p class="text-gray-600 text-sm max-w-xl mx-auto mb-6 leading-relaxed">
+          Platform all-in-one untuk manajemen, pemasaran, dan pertumbuhan<br>
+          bisnis kecil.
+        </p>
+
+        <button onclick="mulaiGratis()" class="bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition">
+          Mulai Gratis
+        </button>
+      </div>
+    </section>
+
+    <!-- Fitur Section -->
+    <section id="fitur" class="py-8 bg-white">
+      <div class="max-w-3xl mx-auto px-5">
+        <h2 class="text-2xl font-bold text-center text-gray-900 mb-7">
+          Mengapa BrandKu?
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-5">
+
+          <!-- Card 1 -->
+          <div class="bg-white border rounded-xl p-4 shadow-sm hover:shadow-md transition min-h-[150px]">
+            <div class="text-2xl mb-3">⚡</div>
+            <h3 class="text-base font-bold mb-2">Mudah Digunakan</h3>
+            <p class="text-gray-600 text-xs leading-relaxed">
+              Tidak perlu keahlian teknis. Setup dalam 5 menit.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-white border rounded-xl p-4 shadow-sm hover:shadow-md transition min-h-[150px]">
+            <div class="text-2xl mb-3">🤖</div>
+            <h3 class="text-base font-bold mb-2">Serba Otomatis</h3>
+            <p class="text-gray-600 text-xs leading-relaxed">
+              Otomatiskan tugas berulang dan fokus pada hal yang penting.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-white border rounded-xl p-4 shadow-sm hover:shadow-md transition min-h-[150px]">
+            <div class="text-2xl mb-3">📊</div>
+            <h3 class="text-base font-bold mb-2">Laporan Real-time</h3>
+            <p class="text-gray-600 text-xs leading-relaxed">
+              Pantau performa bisnismu kapan saja dan di mana saja.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="bg-gray-900 h-[60px] flex items-center justify-center text-xs text-gray-400">
+    <p>© 2025 BrandKu. All rights reserved.</p>
+  </footer>
+
+  <!-- Background putih bawah footer -->
+  <div class="bg-white h-[25px]"></div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
