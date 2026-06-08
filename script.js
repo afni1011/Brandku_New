@@ -1,10 +1,20 @@
-function mulaiGratis() {
-  alert("Terima kasih! Kamu berhasil klik tombol Mulai Gratis.");
-}
+const btnMulaiGratis = document.querySelector('#cta-btn');
+const tagInfo = document.querySelector('#tag-info');
 
-const menuBtn = document.getElementById("menuBtn");
-const mobileMenu = document.getElementById("mobileMenu");
+let counter = 0;
 
-menuBtn.addEventListener("click", function () {
-  mobileMenu.classList.toggle("hidden");
+btnMulaiGratis.addEventListener('click', () => {
+  counter++;
+
+  if (counter === 1) {
+    console.log('clicked');
+
+    tagInfo.classList.remove('hidden');
+    tagInfo.textContent = 'Clicked! Tombol Mulai Gratis berhasil diklik.';
+  } else if (counter === 2) {
+    console.log('off');
+
+    tagInfo.textContent = 'Off! Tombol sudah diklik dua kali.';
+    btnMulaiGratis.classList.add('hidden');
+  }
 });
